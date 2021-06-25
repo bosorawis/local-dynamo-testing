@@ -114,7 +114,7 @@ func SetupTable(t *testing.T, tableName string, dynamoClient *dynamodb.Client) f
         }
         _, err := dynamoClient.DeleteTable(context.TODO(), params)
         if err != nil {
-            t.Logf("WARNING: Failed to delete the test DynamoDB table %q. It has been left in your AWS account and may incur charges. (error was %s)", tableName, err)
+            t.Logf("WARNING: Failed to delete the test DynamoDB table %q", err)
         }
     }
 }
