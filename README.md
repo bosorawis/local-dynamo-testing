@@ -93,7 +93,7 @@ func SetupTable(t *testing.T, tableName string, dynamoClient *dynamodb.Client) f
     time.Sleep(time.Second)
     
     describeInput := &dynamodb.DescribeTableInput{
-    TableName: aws.String(tableName),
+        TableName: aws.String(tableName),
     }
     for {
         resp, err := dynamoClient.DescribeTable(context.TODO(), describeInput)
